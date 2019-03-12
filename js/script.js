@@ -5,7 +5,16 @@ $(function() {
     success: function(result) {
       // console.log(result);
       $.each(result.Search, function(i, movie) {
-        $movies.append('<li>Title: ' + movie.Title + ', Year: ' + movie.Year + '</li>');
+        $movies.append(
+          '<li>Title: ' +
+            movie.Title +
+            ', Year: ' +
+            movie.Year +
+            '</li>' +
+            '<img src="' +
+            movie.Poster +
+            'alt="Movie Poster" </img>'
+        );
       });
     }
   });
