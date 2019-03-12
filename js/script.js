@@ -1,6 +1,7 @@
 $(function() {
   var $movies = $('.movies');
-  $.ajax('http://www.omdbapi.com/?s=star%20wars&apikey=f560962b&y=&plot=short&r=json', {
+
+  $.ajax('http://www.omdbapi.com/?s=star%20wars&apikey=f560962b&y=&plot=full&r=json', {
     dataType: 'json',
     success: function(result) {
       // console.log(result);
@@ -19,11 +20,3 @@ $(function() {
     }
   });
 });
-
-//   })
-//   .then(function(movies) {
-//     $.each(movies, function(i, movie) {
-//       $movies.append('<li>Title: ' + movie.Title + ', Year: ' + movie.Year + '</li>');
-//     });
-//   });
-// });
